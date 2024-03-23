@@ -25,3 +25,8 @@ template_terraform
 ```sh
 bash ./bin/template-initial.sh
 ```
+
+### 参考
+
+- [dockerhub](docker pull hashicorp/terraform:latest)
+- [公式docker](https://hub.docker.com/r/hashicorp/terraform)
