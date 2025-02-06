@@ -11,10 +11,9 @@ terraformを使用しやすいように構築したリポジトリテンプレ�
 ```sh
 template_terraform
 ├── README.md
-├── bin               # テンプレート利用開始のためのシェルスクリプト
+├── bin               # テンプレート利用開始のためのシェルスクリプト・変数管理ファイル
 ├── docs              # ドキュメント
 └── src               # Terraformのソースコード
-├── template.ini      # 使用開始時に一括変更のための変数管理ファイル
 ├── template          # AWS-IAM・リソースのポリシーテンプレート
 ```
 
@@ -28,5 +27,8 @@ bash ./bin/template-initial.sh
 
 ### 参考
 
-- [dockerhub](docker pull hashicorp/terraform:latest)
 - [公式docker](https://hub.docker.com/r/hashicorp/terraform)
+
+```sh
+docker pull hashicorp/terraform:latest
+```
