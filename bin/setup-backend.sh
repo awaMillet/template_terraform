@@ -4,7 +4,7 @@ env=${1:-"dev"}
 region=${2:-"ap-northeast-1"}
 resource_name=${3:-"<dev_tfbackend_name>"}
 
-# DynamoDB テーブル作成(terraform stateロック用)
+# DynamoDB テーブル作成(terraform stateロック用) terraform1.11以降ではDynamoDB不要
 aws dynamodb create-table \
     --region $region \
     --table-name $resource_name \
