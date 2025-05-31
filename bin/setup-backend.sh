@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -eu
 env=${1:-"dev"}
 region=${2:-"ap-northeast-1"}

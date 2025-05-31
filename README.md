@@ -10,11 +10,12 @@ terraformを使用しやすいように構築したリポジトリテンプレ�
 
 ```sh
 template_terraform
-├── README.md
 ├── bin               # テンプレート利用開始のためのシェルスクリプト・変数管理ファイル
 ├── docs              # ドキュメント
-└── src               # Terraformのソースコード
+├── modules           # 共通モジュール
+├── src               # Terraformのソースコード
 ├── template          # AWS-IAM・リソースのポリシーテンプレート
+└── README.md
 ```
 
 ## 利用準備

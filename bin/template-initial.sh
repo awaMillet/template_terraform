@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # template.iniファイルの変数を元にsrc配下ファイルの変数を一括変更
 set -eu
 script_dir=$(cd $(dirname $0);pwd)
