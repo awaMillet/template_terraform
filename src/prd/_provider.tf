@@ -4,7 +4,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Env        = "stg"
+      Env        = "prd"
       Repository = "<repository_name>"
     }
   }
