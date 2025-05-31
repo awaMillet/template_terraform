@@ -37,4 +37,8 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+# etc.
+# terraform.ini
+# setup-backend.sh
+
 # End of https://www.toptal.com/developers/gitignore/api/terraform
