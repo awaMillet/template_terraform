@@ -28,12 +28,15 @@ bash ./bin/template-initial.sh
 ```
 
 3. terraform使用準備をスクリプトで実行(stateLock設定のためのバケット作成)
+   - 各環境数分、実行すること
 
 ```sh
 # 引数なしであればデフォルトdev設定を反映
 bash bin/setup-backend.sh
 # 引数で環境、リージョン、バケット名を指定する場合
-bash bin/setup-backend.sh 環境名(dev or stgなど) リージョン名(ap-northeast-1など) terraformで使用するバケット名
+bash bin/setup-backend.sh dev リージョン名(ap-northeast-1など) terraformで使用するバケット名
+bash bin/setup-backend.sh stg リージョン名(ap-northeast-1など) terraformで使用するバケット名
+bash bin/setup-backend.sh prd リージョン名(ap-northeast-1など) terraformで使用するバケット名
 ```
 
 ### 参考
