@@ -20,7 +20,8 @@ template_terraform
 
 ## 利用準備
 
-- 一括変数修正
+1. 自分用に[template.ini](bin/template.ini)の変数を設定(2でこれから活用するterraform設定を一括で反映するため)
+2. 一括変数修正
 
 ```sh
 bash ./bin/template-initial.sh
