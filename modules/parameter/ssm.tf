@@ -1,5 +1,6 @@
-resource "aws_ssm_parameter" "リソース名" {
-  name  = "パラメーターストア名"
+resource "aws_ssm_parameter" "parameter" {
+  count = 2
+  name  = "parameter${count.index+1}"
   type  = "SecureString"
   value = "dummy"
 
