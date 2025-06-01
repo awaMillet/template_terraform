@@ -1,3 +1,9 @@
+variable "env_str" {
+  type        = string
+  default     = ""
+  description = "VPC environment name"
+}
+
 variable "vpc_cidr_block" {
   type        = string
   default     = "10.0.0.0/16"
