@@ -1,3 +1,3 @@
 module "parameter" {
-  source  = "../../modules/parameter"
+  source = "../../modules/parameter"
 }
