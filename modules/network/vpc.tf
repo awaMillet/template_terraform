@@ -13,8 +13,6 @@ resource "aws_internet_gateway" "main" {
   tags = {
     Name = "${var.env_str}"
   }
-
-  depends_on = [aws_internet_gateway.main]
 }
 
 output "vpc_id" {

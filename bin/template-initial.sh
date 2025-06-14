@@ -23,7 +23,7 @@ for ini_key in ${ini_keys} ; do
 
   echo "Replace <${ini_key}> with ${ini_value}."
   else
-    find . -type f | grep -v ".git/" | xargs sed -i "" "s/<${ini_key}>/${ini_value}/g"
+    find . -type f | grep -v ".git/" | xargs sed -i "s/<${ini_key}>/${ini_value}/g"
     echo "The replacement process succeeded!"
   fi
 
