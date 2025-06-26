@@ -20,4 +20,8 @@ resource "aws_instance" "ec2" {
       Name = var.tag_name
     }
   }
+
+  tags = {
+    Name = var.tag_name
+  }
 }
