@@ -1,3 +1,15 @@
+variable "env_str" {
+  type        = string
+  default     = ""
+  description = "EC2 environment name"
+}
+
+variable "service_str" {
+  type        = string
+  default     = ""
+  description = "EC2 service name"
+}
+
 variable "target_instance_type" {
   type        = string
   default     = "t3.micro"
