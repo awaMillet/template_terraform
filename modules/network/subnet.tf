@@ -1,7 +1,7 @@
 # public subnet
 resource "aws_subnet" "public_a" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.public_subnet_a_cidr_block
+  cidr_block              = cidrsubnet(aws_vpc.main.cidr_block, 4, 1)
   availability_zone       = "ap-northeast-1a"
   map_public_ip_on_launch = true
 
@@ -12,7 +12,7 @@ resource "aws_subnet" "public_a" {
 
 resource "aws_subnet" "public_c" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.public_subnet_c_cidr_block
+  cidr_block              = cidrsubnet(aws_vpc.main.cidr_block, 4, 2)
   availability_zone       = "ap-northeast-1c"
   map_public_ip_on_launch = true
 
@@ -23,7 +23,7 @@ resource "aws_subnet" "public_c" {
 
 resource "aws_subnet" "public_d" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.public_subnet_d_cidr_block
+  cidr_block              = cidrsubnet(aws_vpc.main.cidr_block, 4, 3)
   availability_zone       = "ap-northeast-1d"
   map_public_ip_on_launch = true
 
@@ -67,7 +67,7 @@ resource "aws_route_table_association" "public_d" {
 # private subnet
 resource "aws_subnet" "private_a" {
   vpc_id            = aws_vpc.main.id
-  cidr_block        = var.private_subnet_a_cidr_block
+  cidr_block        = cidrsubnet(aws_vpc.main.cidr_block, 4, 4)
   availability_zone = "ap-northeast-1a"
 
   tags = {
@@ -77,7 +77,7 @@ resource "aws_subnet" "private_a" {
 
 resource "aws_subnet" "private_c" {
   vpc_id            = aws_vpc.main.id
-  cidr_block        = var.private_subnet_c_cidr_block
+  cidr_block        = cidrsubnet(aws_vpc.main.cidr_block, 4, 5)
   availability_zone = "ap-northeast-1c"
 
   tags = {
@@ -87,7 +87,7 @@ resource "aws_subnet" "private_c" {
 
 resource "aws_subnet" "private_d" {
   vpc_id            = aws_vpc.main.id
-  cidr_block        = var.private_subnet_d_cidr_block
+  cidr_block        = cidrsubnet(aws_vpc.main.cidr_block, 4, 6)
   availability_zone = "ap-northeast-1d"
 
   tags = {
