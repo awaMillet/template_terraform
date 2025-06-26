@@ -10,6 +10,11 @@ variable "service_str" {
   description = "EC2 service name"
 }
 
+variable "vpc_id_str" {
+  type        = string
+  description = "VPC belonging to EC2"
+}
+
 variable "target_instance_type" {
   type        = string
   default     = "t3.micro"
