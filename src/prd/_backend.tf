@@ -7,9 +7,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "<prd_tfbackend_name>"
-    region         = "ap-northeast-1"
-    key            = "terraform.tfstate"
-    encrypt        = true
+    bucket  = "<prd_tfbackend_name>"
+    region  = "ap-northeast-1"
+    key     = "terraform.tfstate"
+    encrypt = true
   }
 }
