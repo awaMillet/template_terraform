@@ -18,6 +18,7 @@ resource "aws_iam_role_policy_attachments_exclusive" "ec2_managed_policy" {
   role_name = aws_iam_role.ec2.name
   policy_arns = [
     data.aws_iam_policy.amazon_s3_full_access.arn,
-    data.aws_iam_policy.cloudwatch_agent_server_policy.arn
+    data.aws_iam_policy.cloudwatch_agent_server_policy.arn,
+    data.aws_iam_policy.amazon_ssm_managed_instance_core.arn
   ]
 }
