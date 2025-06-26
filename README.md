@@ -15,7 +15,7 @@ template_terraform
 ├── modules           # 共通モジュール
 ├── src               # Terraformのソースコード
 ├── template          # リソースのポリシーテンプレート
-└── README.md
+└── README.md         # このドキュメント
 ```
 
 ## 利用準備
