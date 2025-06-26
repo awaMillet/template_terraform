@@ -10,11 +10,6 @@ variable "service_str" {
   description = "EC2 service name"
 }
 
-variable "vpc_id_str" {
-  type        = string
-  description = "VPC belonging to EC2"
-}
-
 variable "target_instance_type" {
   type        = string
   default     = "t3.micro"
@@ -26,11 +21,21 @@ variable "target_ami" {
   default     = "ami-0c1638aa346a43fe8" # amazonlinux2023
   description = "EC2 AMI ID"
 }
+variable "vpc_id_str" {
+  type        = string
+  description = "vpc id"
+}
 
 variable "target_subnet" {
   type        = string
   default     = ""
   description = "EC2 subnet"
+}
+
+variable "target_az" {
+  type        = string
+  default     = "ap-northeast-1a"
+  description = "EC2 availability-zon"
 }
 
 variable "tag_name" {
