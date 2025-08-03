@@ -6,7 +6,7 @@ variable "env_str" {
 
 variable "service_str" {
   type        = string
-  default     = ""
+  default     = "SAMPLE"
   description = "EC2 service name"
 }
 
@@ -21,6 +21,7 @@ variable "target_ami" {
   default     = "ami-0c1638aa346a43fe8" # amazonlinux2023
   description = "EC2 AMI ID"
 }
+
 variable "vpc_id_str" {
   type        = string
   description = "vpc id"
