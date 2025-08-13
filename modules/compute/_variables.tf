@@ -44,3 +44,9 @@ variable "tag_name" {
   default     = "EC2 created by terraform"
   description = "EC2 tag name"
 }
+
+variable "user_data" {
+  description = "The user data to provide when launching the instance"
+  type        = string
+  default     = null
+}

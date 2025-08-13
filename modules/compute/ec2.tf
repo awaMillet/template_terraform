@@ -21,6 +21,8 @@ resource "aws_instance" "ec2" {
     }
   }
 
+  user_data = var.user_data != null ? var.user_data : null
+
   tags = {
     Name = var.tag_name
   }
