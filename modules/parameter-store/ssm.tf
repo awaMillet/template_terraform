@@ -1,6 +1,5 @@
 resource "aws_ssm_parameter" "parameter" {
-  count = 2
-  name  = "parameter${count.index + 1}"
+  name  = var.parameter_name
   type  = "SecureString"
   value = "dummy"
 
@@ -8,5 +7,9 @@ resource "aws_ssm_parameter" "parameter" {
     ignore_changes = [
       value
     ]
+  }
+
+  tags = {
+    Name = var.tag_name
   }
 }
