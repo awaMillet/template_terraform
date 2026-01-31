@@ -1,5 +1,5 @@
-# module "ec2" {
-#   source = "../../modules/compute"
+# module "sample_iam" {
+#   source = "../../modules/iam"
 
 #   env_str       = "dev"
 #   vpc_id_str    = module.network.vpc_id
