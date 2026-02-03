@@ -1,6 +1,6 @@
 variable "env_str" {
   type        = string
-  default     = ""
+  default     = "dev"
   description = "VPC environment name"
 }
 
@@ -45,3 +45,17 @@ variable "private_subnet_d_cidr_block" {
   default     = "10.0.96.0/20"
   description = "subnet's cidr_block"
 }
+
+# NAT Gateway settings
+variable "enable_nat_gateway" {
+  type        = bool
+  default     = false
+  description = "Whether to create a NAT Gateway"
+}
+
+variable "single_nat_gateway" {
+  type        = bool
+  default     = true
+  description = "Whether to create a single NAT Gateway (true) or one per AZ (false)"
+}
+
