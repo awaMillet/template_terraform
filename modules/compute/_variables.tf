@@ -50,3 +50,23 @@ variable "user_data" {
   type        = string
   default     = null
 }
+
+# Root block device settings
+variable "root_volume_type" {
+  type        = string
+  default     = "gp3"
+  description = "Root block device volume type (e.g., gp2, gp3, io1, io2)"
+}
+
+variable "root_volume_size" {
+  type        = number
+  default     = 100
+  description = "Root block device volume size in GB"
+}
+
+variable "root_volume_iops" {
+  type        = number
+  default     = 3000
+  description = "Root block device IOPS (only for gp3, io1, io2)"
+}
+
