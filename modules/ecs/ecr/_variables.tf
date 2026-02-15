@@ -1,7 +1,7 @@
 variable "env_str" {
   type        = string
   default     = "dev"
-  description = "environment name"
+  description = "環境名"
 }
 
 variable "repository_name" {
